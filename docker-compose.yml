@@ -64,8 +64,7 @@ services:
       - "5173:5173"
     depends_on:
       - backend
-    networks:
-    - app_network
+
   nginx:
     image: nginx:latest
     ports:
@@ -76,9 +75,4 @@ services:
     depends_on:
       - backend
       - frontend
-    networks:
-    - app_network
     
-  networks:
-  app_network:
-    driver: bridge
