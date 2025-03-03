@@ -9,7 +9,7 @@ const [books, setBooks] = useState([])
 useEffect(()=>{
 const fetchAllBooks = async ()=>{
     try {
-      const res = await axios.get("/books")  
+      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/books`)  
       setBooks(res.data)
       console.log(res)
     }catch(err){
@@ -22,7 +22,7 @@ fetchAllBooks()
 
 const handleDelete = async (id)=>{
     try{
-    await axios.delete("/books/"+id)
+    await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/books/`+id)
     window.location.reload()
     }catch(err){
         console.log(err)

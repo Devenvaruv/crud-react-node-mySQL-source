@@ -27,7 +27,7 @@ const Update = () => {
    const handleClick = async e =>{
     e.preventDefault()
     try{
-        await axios.put("books/"+ bookID, book)
+        await axios.put(`${import.meta.env.VITE_API_BASE_URL}books/`+ bookID, book)
         navigate("/")
     }catch(err){
         console.log(err)
