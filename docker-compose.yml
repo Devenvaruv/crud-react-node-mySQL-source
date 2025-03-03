@@ -48,7 +48,6 @@ services:
     container_name: my_backend
     ports:
       - "8800:8800"
-    # Pass RDS connection info to your backend via environment variables
     environment:
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}

@@ -20,7 +20,7 @@ const Add = () => {
    const handleClick = async e =>{
     e.preventDefault()
     try{
-        await axios.post("/books", book)
+        await axios.post(`${import.meta.env.VITE_API_BASE_URL}/books`, book);
         navigate("/")
     }catch(err){
         console.log(err)
