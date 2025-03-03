@@ -49,7 +49,7 @@ const handleDelete = async (id)=>{
     ))}
   </div>
   <button className='addBookButton'>
-   <Link to="/add">Add no Book</Link>
+   <Link to="/add">Add New Book</Link>
   </button>
     </div>
   )
